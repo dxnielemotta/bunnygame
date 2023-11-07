@@ -53,3 +53,15 @@ function draw() {
   }
 }
 
+function reset () {
+  andarX = 0
+  andarY = 0
+  random = Math.floor(Math.random() * 8) 
+  randomIntervalo = random * 64
+  positionX, positionY = randomIntervalo
+  botao.remove()
+  
+  loop()
+}
+
+
