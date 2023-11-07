@@ -60,8 +60,26 @@ function reset () {
   randomInterval = random * 64
   positionX, positionY = randomInterval
   button.remove()
-  
+
   loop()
 }
+
+function keyPressed() {
+  if(keyIsDown(RIGHT_ARROW) && andarX < 512) {
+    andarX += 64
+  }
+  if(keyIsDown(LEFT_ARROW) && andarX > 0) {
+    andarX -= 64
+  }
+  if(keyIsDown(DOWN_ARROW) && andarY < 512) {
+    andarY += 64
+  }
+  if(keyIsDown(UP_ARROW) && andarY > 0) {
+    andarY -= 64
+  }
+
+
+}
+
 
 
