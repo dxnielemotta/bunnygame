@@ -27,3 +27,29 @@ function setup() {
   bunny = loadImage('bunny.png')
   carrot = loadImage('cenoura.png')
 }
+
+function draw() {
+  background(220);
+
+ for (let x = 0; x < 9; x++) {
+  for (let y = 0; y < 9; y++) {
+    image(grass, x*size, y*size, size, size)
+  }
+ }
+  
+  image(carrot, randomInterval, randomInterval, size, size)
+  
+  image(bunny, andarX, andarY, size, size)
+  
+  if (andarX === randomInterval && andarY === randomInterval) {
+    rect(160,160,256,256,30)
+    textSize(35)
+    text('GANHOU!', 200, 300)
+
+    button = createButton('Reiniciar')
+    button.position(250,320)
+    button.mousePressed(reset)
+    noLoop()
+  }
+}
+
